@@ -1,6 +1,11 @@
 # Cards
 
 **TODO: Add description**
+<!-- To create Project use below cmd-->
+mix new projectname 
+
+<!-- To run project use below cmd -->
+iex -S mix
 
 ## Installation
 
