@@ -1,6 +1,21 @@
 defmodule Cards do
- def decks do
-   ["One", "Two", "Three"]
+ def create_decks do
+  values = ["One", "Two", "Three"]
+  suits = ["Spades", "Clubs", "Hearts"]
+  # Solution 1 nested loops and flatten
+  #  for value <- values do
+  #   for suit <- suits do
+  #   "#{value} of #{suit}"
+  # end
+  # end
+   # List.flatten(cards) To flatten list data
+# Solution 2 Comperenshion with multiple list values
+  for suit <- suits , value <- values do
+    "#{value} of #{suit}"
+  end
+
+
+
  end
 
  def shuffle(dec) do
