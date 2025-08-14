@@ -14,8 +14,6 @@ defmodule Cards do
     "#{value} of #{suit}"
   end
 
-
-
  end
 
  def shuffle(dec) do
@@ -24,5 +22,14 @@ defmodule Cards do
 
  def contains?(desc, hand) do
     Enum.member?(desc,hand)
+ end
+
+ def deals(decs, num) do
+   Enum.split(decs, num)
+ end
+
+ def save_dec(file, name) do
+   binary = :erlang.term_to_binary(file)
+   File.write(name,binary)
  end
 end
