@@ -43,6 +43,11 @@ defmodule Cards do
     :error -> "Something went wrong !!!"
   end
 
+  # atom
+  #  atoms are premitive data types
+  #  example :ok :error
+  #
+
 
  end
 end
