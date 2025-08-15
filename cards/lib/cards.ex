@@ -1,4 +1,15 @@
 defmodule Cards do
+  @moduledoc """
+    This is module documentation
+    Provides methods for creating and handling a deck of cards
+
+    ## To generate document
+        Project>  mix doc
+  """
+
+  @doc """
+  Returns list of string elements
+  """
  def create_decks do
   values = ["One", "Two", "Three"]
   suits = ["Spades", "Clubs", "Hearts"]
@@ -23,7 +34,19 @@ defmodule Cards do
  def contains?(desc, hand) do
     Enum.member?(desc,hand)
  end
- def deals(decs, num) do
+ @doc """
+ This deal function divides a deck into a hand and the reminder of the deck
+ The `num` argument indicates how many cards should be in hand
+
+ ## Examples
+
+
+     iex> deck = Cards.create_decks
+     iex> {hand, deck} = Cards.deal(deck, 1)
+     iex> hand
+     iex> ["One of Spades]
+ """
+ def deal(decs, num) do
    Enum.split(decs, num)
  end
 
@@ -56,6 +79,6 @@ defmodule Cards do
   def create_hand(hand_size) do
     Cards.create_decks()
     |> Cards.shuffle()
-    |> Cards.deals(hand_size)
+    |> Cards.deal(hand_size)
   end
 end
