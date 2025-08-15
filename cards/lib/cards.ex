@@ -34,19 +34,19 @@ defmodule Cards do
  end
 
  def loadfile(filename) do
-   {status, binary} = File.read(filename)
+  #  {status, binary} = File.read(filename)
   #  status === 'ok'
   # if(status === :ok) dont use it
 
-  case status do
-    :ok -> :erlang.binary_to_term(binary)
-    :error -> "Something went wrong !!!"
+  case File.read(filename) do
+    {:ok, abc} -> :erlang.binary_to_term(abc)
+    {:error, _reason} -> "Something went wrong !!! "
   end
 
   # atom
   #  atoms are premitive data types
   #  example :ok :error
-  #
+  # _reason when we use underscore before variable it means unused varibale
 
 
  end
