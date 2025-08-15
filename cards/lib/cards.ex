@@ -23,7 +23,6 @@ defmodule Cards do
  def contains?(desc, hand) do
     Enum.member?(desc,hand)
  end
-
  def deals(decs, num) do
    Enum.split(decs, num)
  end
@@ -40,14 +39,23 @@ defmodule Cards do
 
   case File.read(filename) do
     {:ok, abc} -> :erlang.binary_to_term(abc)
-    {:error, _reason} -> "Something went wrong !!! "
+    {:error, _} -> "Something went wrong !!! "
   end
+
+
 
   # atom
   #  atoms are premitive data types
   #  example :ok :error
   # _reason when we use underscore before variable it means unused varibale
-
+  # dec = Cards.create_decks()
+    # cards = Cards.shuffle(dec)
+    # hand = Cards.deals(cards, hand_size)
 
  end
+  def create_hand(hand_size) do
+    Cards.create_decks()
+    |> Cards.shuffle()
+    |> Cards.deals(hand_size)
+  end
 end
