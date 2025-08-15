@@ -2,7 +2,8 @@ defmodule CardsTest do
   use ExUnit.Case
   doctest Cards
 
-  test "greets the world" do
-    assert Cards.hello() == :world
+  test "validate contains method" do
+    assert Cards.contains?(["Testing", "abc", "xys"], "abc") == :true
   end
+
 end
