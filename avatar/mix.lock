@@ -1,0 +1,4 @@
+%{
+  "ex_png": {:hex, :ex_png, "1.0.0", "196008a5f02eecce28c928471387c5834bb1403482fd6fa22c94c3e343399edd", [:mix], [], "hexpm", "376dfec466ac1ea1f726ba784a99575047498b350b1f4db607d9bcd756ebbc7d"},
+  "mogrify": {:hex, :mogrify, "0.9.3", "238c782f00271dace01369ad35ae2e9dd020feee3443b9299ea5ea6bed559841", [:mix], [], "hexpm", "0189b1e1de27455f2b9ae8cf88239cefd23d38de9276eb5add7159aea51731e6"},
+}
